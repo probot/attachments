@@ -1,0 +1,36 @@
+{
+  "name": "probot-attachments",
+  "version": "1.0.0",
+  "description": "A Probot extension to add message attachments to comments on GitHub",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest && standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/probot/attachments.git"
+  },
+  "keywords": [
+    "probot",
+    "probot-extension"
+  ],
+  "author": "Brandon Keepers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/probot/attachments/issues"
+  },
+  "homepage": "https://github.com/probot/attachments#readme",
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "jsdom": "^11.3.0",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  }
+}
