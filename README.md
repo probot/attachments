@@ -1,6 +1,6 @@
 # Probot: attachments
 
-A [Probot](https://github.com/probot/probot) add message attachments to comments on GitHub.
+A [Probot](https://github.com/probot/probot) extension to add message attachments to comments on GitHub.
 
 ## Usage
 
