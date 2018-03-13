@@ -53,7 +53,7 @@ describe('attachment', () => {
       test('adds multiple attachments', async () => {
         await attachments(context).add([
           {title: 'Hello World', title_link: 'https://example.com/hello'},
-          {title: 'Goodbye World', title_link: 'https://example.com/goodbye'},
+          {title: 'Goodbye World', title_link: 'https://example.com/goodbye'}
         ])
 
         expect(github.issues.editComment).toHaveBeenCalledWith({
