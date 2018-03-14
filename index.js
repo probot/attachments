@@ -2,7 +2,8 @@ const template = require('./template')
 
 const attachTo = {
   issue: (context, content) => {
-    const body = context.payload.issue.body + '\n\n' + content.join('\n')
+    const { issue, pull_request: pr } = context.payload
+    const body = (issue || pr).body + '\n\n' + content.join('\n')
     const params = context.issue({body})
     return context.github.issues.edit(params)
   },
