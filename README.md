@@ -5,13 +5,17 @@ A [Probot](https://github.com/probot/probot) extension to add message attachment
 ## Usage
 
 ```js
-const attachments = require('probot-attachments');
+const attachments = require('probot-attachments')
 
-// where `context` is a Probot `Context`
-await attachments(context).add({
-  'title': 'Hello World',
-  'title_link': 'https://example.com/hello',
-})
+module.exports = robot => {
+  const events = ['issues.opened', 'pull_request.opened', 'issue_comment.created']
+  robot.on(events, context => {
+    return attachments(context).add({
+      'title': 'Hello World',
+      'title_link': 'https://example.com/hello'
+    })
+  })
+}
 ```
 
 ## Example
