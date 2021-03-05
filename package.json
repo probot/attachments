@@ -9,20 +9,13 @@
   "scripts": {
     "test": "jest && standard"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/probot/attachments.git"
-  },
+  "repository": "github:probot/attachments",
   "keywords": [
     "probot",
     "probot-extension"
   ],
   "author": "Brandon Keepers",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/probot/attachments/issues"
-  },
-  "homepage": "https://github.com/probot/attachments#readme",
   "devDependencies": {
     "jest": "^21.2.1",
     "jsdom": "^11.3.0",
