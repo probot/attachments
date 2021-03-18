@@ -1,18 +1,32 @@
-const template = require('./template')
+const { Context } = require('probot');
+const template = require('./template');
 
 const attachTo = {
+
+  /**
+   * Update issue body
+   * @param {Context} context 
+   * @param {string} content 
+   * @returns 
+   */
   issue: (context, content) => {
     const { issue, pull_request: pr } = context.payload
     const body = (issue || pr).body + '\n\n' + content.join('\n')
     const params = context.issue({body})
-    return context.github.issues.edit(params)
+    return context.octokit.issues.update(params)
   },
 
+  /**
+   * Update issue comment
+   * @param {Context} context 
+   * @param {string} content 
+   * @returns 
+   */
   comment: (context, content) => {
     const body = context.payload.comment.body + '\n\n' + content.join('\n')
-    const id = context.payload.comment.id
-    const params = context.repo({id, body})
-    return context.github.issues.editComment(params)
+    const comment_id = context.payload.comment.id
+    const params = context.repo({comment_id, body})
+    return context.octokit.issues.updateComment(params)
   }
 }
 
