@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest && standard"
   },
-  "repository": "github:probot/attachments",
+  "repository": "github:BellCode-Inc/attachments",
   "keywords": [
     "probot",
     "probot-extension"
@@ -19,7 +19,7 @@
   "devDependencies": {
     "jest": "^21.2.1",
     "jsdom": "^11.3.0",
-    "probot": "^6.0.0",
+    "probot": "^11.0.1",
     "standard": "^10.0.3"
   },
   "standard": {
