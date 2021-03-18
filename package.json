@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest && standard"
   },
-  "repository": "github:BellCode-Inc/attachments",
+  "repository": "github:probot/attachments",
   "keywords": [
     "probot",
     "probot-extension"
